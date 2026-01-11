@@ -11,129 +11,6 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    
-    <style>
-        .page-hero {
-            height: 60vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), 
-                        url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        
-        .page-hero h1 {
-            font-size: 60px;
-            color: white;
-            margin-bottom: 20px;
-        }
-        
-        .philosophy-section {
-            background: linear-gradient(135deg, rgba(2, 54, 123, 0.03), rgba(119, 168, 70, 0.03));
-        }
-        
-        .philosophy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-        
-        .philosophy-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-            transition: all 0.5s ease;
-            text-align: center;
-        }
-        
-        .philosophy-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-        }
-        
-        .philosophy-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--ocean-blue), var(--seafoam));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-        }
-        
-        .philosophy-icon i {
-            font-size: 36px;
-            color: white;
-        }
-        
-        .difference-section {
-            background: white;
-        }
-        
-        .difference-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .difference-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-        }
-        
-        .difference-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, rgba(244, 79, 95, 0.1), rgba(184, 134, 177, 0.1));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        
-        .difference-icon i {
-            font-size: 24px;
-            color: var(--coral);
-        }
-        
-        .guest-types {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .guest-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-        }
-        
-        .guest-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-        
-        .guest-icon {
-            font-size: 48px;
-            color: var(--ocean-blue);
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -152,7 +29,7 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="index.html#booking" class="book-now-nav">Book Now</a></li>
+                    <li><a href="contact.html#enquiry" class="book-now-nav">Book Now</a></li>
                 </ul>
             </nav>
         </div>
@@ -161,9 +38,9 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>About Our Villa</h1>
-                <p>Discover the story behind Kerala's most exclusive beachfront retreat</p>
+            <div class="page-hero-content">
+                <h1>About Vadanappilly Beach Villa</h1>
+                <p>Discover our story, philosophy, and what makes us the perfect coastal retreat</p>
             </div>
         </div>
     </section>
@@ -171,113 +48,157 @@
     <!-- Introduction Section -->
     <section class="section">
         <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+                <p>Welcome to Vadanappilly Beach Villa - Where Luxury Meets Nature</p>
+            </div>
             <div class="about-content">
-                <div class="about-image slide-in-left">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Villa Entrance">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Vadanappilly Beach Villa">
                 </div>
-                <div class="about-text slide-in-right">
-                    <h2>Introduction to Vadanappilly Beach Villa</h2>
-                    <p>Nestled along the pristine shores of Vadanappilly, our beach villa represents the culmination of a dream to create Kerala's most exclusive coastal retreat. Established with a vision to blend traditional Keralite hospitality with modern luxury, we offer an intimate escape that feels both authentic and indulgent.</p>
-                    <p>Our journey began with a simple philosophy: to create a space where guests could experience the true essence of coastal Kerala while enjoying world-class amenities and personalized service.</p>
+                <div class="about-text fade-in">
+                    <h3>Introduction to Vadanappilly Beach Villa</h3>
+                    <p>Founded with a vision to create Kerala's most exclusive beachfront retreat, Vadanappilly Beach Villa represents the perfect harmony between traditional Keralite hospitality and contemporary luxury. Our journey began with a simple yet powerful idea: to offer travelers an intimate escape that feels both authentic and indulgent.</p>
+                    <p>Nestled along the pristine shores of Vadanappilly, our villa was designed to provide an immersive coastal experience. Every detail, from the architecture to the services, reflects our commitment to creating unforgettable memories for our guests.</p>
+                    <p>We believe in offering more than just accommodation - we provide a sanctuary where you can reconnect with nature, experience authentic Kerala culture, and create lasting memories with your loved ones.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Philosophy Section -->
-    <section class="section philosophy-section">
+    <section class="section" style="background: linear-gradient(135deg, rgba(2, 54, 123, 0.03), rgba(119, 168, 70, 0.03));">
         <div class="container">
             <div class="section-title">
                 <h2>Our Philosophy</h2>
                 <p>Guiding principles that shape every aspect of your stay</p>
             </div>
-            <div class="philosophy-grid">
-                <div class="philosophy-card fade-in">
-                    <div class="philosophy-icon">
+            <div class="amenities-container">
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Authentic Hospitality</h3>
-                    <p>We believe in genuine, personalized service that makes every guest feel like family, not just visitors.</p>
+                    <p>We believe in genuine, personalized service that makes every guest feel like family, not just visitors. Our team is trained in traditional Keralite hospitality values.</p>
                 </div>
-                <div class="philosophy-card fade-in delay-1">
-                    <div class="philosophy-icon">
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3>Sustainable Luxury</h3>
-                    <p>Our commitment to eco-friendly practices ensures luxury doesn't come at the expense of our beautiful environment.</p>
+                    <p>Our commitment to eco-friendly practices ensures luxury doesn't come at the expense of our beautiful environment. We use sustainable materials and support local communities.</p>
                 </div>
-                <div class="philosophy-card fade-in delay-2">
-                    <div class="philosophy-icon">
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-home"></i>
                     </div>
                     <h3>Home Away From Home</h3>
-                    <p>We create spaces that feel personal and comfortable, where you can truly relax and be yourself.</p>
+                    <p>We create spaces that feel personal and comfortable, where you can truly relax and be yourself. Every villa is designed to provide the comforts of home with the luxury of a resort.</p>
+                </div>
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Cultural Connection</h3>
+                    <p>We bridge the gap between traditional Kerala culture and modern comforts, offering authentic experiences that respect and celebrate local heritage.</p>
+                </div>
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Attention to Detail</h3>
+                    <p>From the quality of linens to the selection of local ingredients, every detail is carefully considered to enhance your experience and comfort.</p>
+                </div>
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Focus</h3>
+                    <p>We work closely with local artisans, farmers, and service providers to ensure our operations benefit the local community while providing authentic experiences.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- What Makes Us Different -->
-    <section class="section difference-section">
+    <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>What Makes Us Different</h2>
                 <p>Why choose our villa over traditional hotels and resorts</p>
             </div>
-            <div class="difference-grid">
-                <div class="difference-item fade-in">
-                    <div class="difference-icon">
+            <div class="why-choose-grid">
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
                         <i class="fas fa-user-friends"></i>
                     </div>
-                    <div>
-                        <h3>Personalized Privacy</h3>
-                        <p>Unlike crowded hotels, enjoy complete privacy in your own villa with dedicated staff attending only to you.</p>
-                    </div>
+                    <h3>Complete Privacy</h3>
+                    <p>Unlike crowded hotels, enjoy complete privacy in your own villa with dedicated staff attending only to you and your group.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>No shared public spaces</li>
+                        <li>Private beach access</li>
+                        <li>Exclusive use of amenities</li>
+                    </ul>
                 </div>
-                <div class="difference-item fade-in delay-1">
-                    <div class="difference-icon">
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
-                    <div>
-                        <h3>Customized Dining</h3>
-                        <p>Personal chef services with menus tailored to your preferences, dietary needs, and schedule.</p>
-                    </div>
+                    <h3>Customized Dining</h3>
+                    <p>Personal chef services with menus tailored to your preferences, dietary needs, and schedule - no fixed meal times.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Personalized menus</li>
+                        <li>Flexible dining hours</li>
+                        <li>Special diet accommodations</li>
+                    </ul>
                 </div>
-                <div class="difference-item fade-in delay-2">
-                    <div class="difference-icon">
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <div>
-                        <h3>Space & Comfort</h3>
-                        <p>Spacious living areas, private pools, and multiple bedrooms perfect for families and groups.</p>
-                    </div>
+                    <h3>Space & Comfort</h3>
+                    <p>Spacious living areas, private pools, and multiple bedrooms perfect for families and groups - feel at home, not in a hotel room.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Multiple living spaces</li>
+                        <li>Private outdoor areas</li>
+                        <li>Family-friendly layout</li>
+                    </ul>
                 </div>
-                <div class="difference-item fade-in delay-3">
-                    <div class="difference-icon">
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <div>
-                        <h3>Flexible Scheduling</h3>
-                        <p>No fixed meal times or activity schedules - your vacation revolves around your preferences.</p>
-                    </div>
+                    <h3>Flexible Experience</h3>
+                    <p>Your vacation, your rules. No fixed schedules, meal times, or activity timings. Everything revolves around your preferences.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>24/7 concierge</li>
+                        <li>Custom activity planning</li>
+                        <li>Flexible check-in/out</li>
+                    </ul>
                 </div>
-                <div class="difference-item fade-in delay-4">
-                    <div class="difference-icon">
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
                         <i class="fas fa-water"></i>
                     </div>
-                    <div>
-                        <h3>Private Beach Access</h3>
-                        <p>Exclusive access to a pristine beach stretch, away from tourist crowds.</p>
-                    </div>
+                    <h3>Private Beach Access</h3>
+                    <p>Exclusive access to a pristine beach stretch, away from tourist crowds. Your own slice of paradise.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Direct beach access</li>
+                        <li>Private shoreline</li>
+                        <li>Beach equipment provided</li>
+                    </ul>
                 </div>
-                <div class="difference-item fade-in delay-5">
-                    <div class="difference-icon">
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <div>
-                        <h3>Local Experiences</h3>
-                        <p>Authentic cultural experiences and local interactions curated specifically for you.</p>
-                    </div>
+                    <h3>Authentic Experiences</h3>
+                    <p>Curated cultural experiences and local interactions that go beyond typical tourist activities.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Cooking classes</li>
+                        <li>Cultural workshops</li>
+                        <li>Local market visits</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -288,46 +209,91 @@
         <div class="container">
             <div class="section-title">
                 <h2>Ideal Guests</h2>
-                <p>Who will enjoy their stay the most at Vadanappilly</p>
+                <p>Who will enjoy their stay the most at Vadanappilly Beach Villa</p>
             </div>
-            <div class="guest-types">
-                <div class="guest-card fade-in">
-                    <div class="guest-icon">
+            <div class="amenities-container">
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Families</h3>
                     <p>Spacious accommodations and child-friendly amenities make our villa perfect for multi-generational family vacations.</p>
-                    <ul style="text-align: left; margin-top: 20px;">
+                    <ul style="text-align: left; margin-top: 15px; font-size: 14px;">
                         <li>Child-safe swimming areas</li>
                         <li>Family activity planning</li>
                         <li>Separate bedrooms for privacy</li>
                         <li>Kid-friendly menu options</li>
+                        <li>Baby equipment available</li>
                     </ul>
                 </div>
-                <div class="guest-card fade-in delay-1">
-                    <div class="guest-icon">
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Couples</h3>
-                    <p>Romantic getaways with private dinners on the beach, couples spa treatments, and intimate settings.</p>
-                    <ul style="text-align: left; margin-top: 20px;">
+                    <p>Romantic getaways with private dinners on the beach, couples spa treatments, and intimate settings perfect for honeymoons and anniversaries.</p>
+                    <ul style="text-align: left; margin-top: 15px; font-size: 14px;">
                         <li>Romantic sunset setups</li>
                         <li>Private beach dinners</li>
                         <li>Couples spa packages</li>
                         <li>Honeymoon specials</li>
+                        <li>Privacy ensured</li>
                     </ul>
                 </div>
-                <div class="guest-card fade-in delay-2">
-                    <div class="guest-icon">
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-suitcase-rolling"></i>
                     </div>
                     <h3>Long-Stay Travelers</h3>
-                    <p>Perfect for digital nomads, writers, or anyone seeking an extended peaceful retreat with all comforts of home.</p>
-                    <ul style="text-align: left; margin-top: 20px;">
+                    <p>Perfect for digital nomads, writers, artists, or anyone seeking an extended peaceful retreat with all comforts of home.</p>
+                    <ul style="text-align: left; margin-top: 15px; font-size: 14px;">
                         <li>High-speed WiFi</li>
                         <li>Dedicated workspace</li>
                         <li>Monthly rate discounts</li>
                         <li>Laundry and housekeeping</li>
+                        <li>Flexible meal plans</li>
+                    </ul>
+                </div>
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3>Celebration Groups</h3>
+                    <p>Perfect for special occasions like birthdays, anniversaries, family reunions, or small wedding celebrations.</p>
+                    <ul style="text-align: left; margin-top: 15px; font-size: 14px;">
+                        <li>Event planning assistance</li>
+                        <li>Special decoration services</li>
+                        <li>Custom celebration menus</li>
+                        <li>Photography services</li>
+                        <li>Group activity coordination</li>
+                    </ul>
+                </div>
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <h3>Adventure Seekers</h3>
+                    <p>Guests looking to explore Kerala's natural beauty while enjoying luxurious comfort after their adventures.</p>
+                    <ul style="text-align: left; margin-top: 15px; font-size: 14px;">
+                        <li>Adventure activity planning</li>
+                        <li>Equipment storage</li>
+                        <li>Hearty meal options</li>
+                        <li>Local guide connections</li>
+                        <li>Recovery facilities</li>
+                    </ul>
+                </div>
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrapper">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Wellness Enthusiasts</h3>
+                    <p>Those seeking rejuvenation through yoga, meditation, Ayurvedic treatments, and healthy living.</p>
+                    <ul style="text-align: left; margin-top: 15px; font-size: 14px;">
+                        <li>Yoga and meditation sessions</li>
+                        <li>Ayurvedic consultation</li>
+                        <li>Healthy meal options</li>
+                        <li>Wellness activity planning</li>
+                        <li>Tranquil environment</li>
                     </ul>
                 </div>
             </div>
@@ -338,17 +304,17 @@
     <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Experience the Difference</h2>
-                <p>Ready to create unforgettable memories at Vadanappilly Beach Villa?</p>
+                <h2>Ready to Experience the Difference?</h2>
+                <p>Book your stay and discover why Vadanappilly Beach Villa is the perfect coastal retreat</p>
             </div>
             <div style="text-align: center;">
-                <a href="index.html#booking" class="hero-btn">Book Your Stay Now</a>
+                <a href="contact.html#enquiry" class="hero-btn">Book Your Stay Now</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
@@ -365,10 +331,11 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Villa</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#enquiry">Book Now</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
