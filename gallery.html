@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Vadanappilly Beach Villa</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        .page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .page-hero h1 {
+            font-size: 60px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .gallery-filter {
+            background: white;
+            border: 2px solid var(--ocean-blue);
+            color: var(--ocean-blue);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-filter:hover,
+        .gallery-filter.active {
+            background: var(--ocean-blue);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(2, 54, 123, 0.2);
+        }
+        
+        .gallery-section {
+            background: linear-gradient(135deg, rgba(249, 246, 240, 0.5), rgba(249, 246, 240, 0.8));
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            height: 280px;
+            box-shadow: 0 10px 20px var(--shadow);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px var(--shadow-hover);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .category-title {
+            text-align: center;
+            margin: 80px 0 40px;
+            color: var(--ocean-blue);
+            font-size: 36px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .category-title:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--coral), var(--lavender));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .video-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(2, 54, 123, 0.05), rgba(119, 168, 70, 0.05));
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-umbrella-beach"></i> Vadanappilly Beach Villa
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.html#booking" class="book-now-nav">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Gallery</h1>
+                <p>Immerse yourself in the beauty of Vadanappilly through stunning visuals</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-filter="all">All Photos</button>
+                <button class="gallery-filter" data-filter="exterior">Exterior & Beach</button>
+                <button class="gallery-filter" data-filter="rooms">Rooms & Interiors</button>
+                <button class="gallery-filter" data-filter="common">Common Areas</button>
+                <button class="gallery-filter" data-filter="views">Views from Villa</button>
+                <button class="gallery-filter" data-filter="lifestyle">Lifestyle Moments</button>
+            </div>
+
+            <!-- Exterior & Beachfront -->
+            <h3 class="category-title">Exterior & Beachfront</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Villa Exterior">
+                    <div class="gallery-overlay">
+                        <h4>Main Villa</h4>
+                        <p>Traditional Kerala architecture with modern luxury</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-1" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Beach View">
+                    <div class="gallery-overlay">
+                        <h4>Private Beach</h4>
+                        <p>Exclusive access to pristine shoreline</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-2" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Infinity Pool">
+                    <div class="gallery-overlay">
+                        <h4>Infinity Pool</h4>
+                        <p>Overlooking the Arabian Sea</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-3" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Garden Area">
+                    <div class="gallery-overlay">
+                        <h4>Tropical Gardens</h4>
+                        <p>Lush greenery and native plants</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-4" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Outdoor Seating">
+                    <div class="gallery-overlay">
+                        <h4>Outdoor Lounge</h4>
+                        <p>Perfect for evening gatherings</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-5" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Beach Path">
+                    <div class="gallery-overlay">
+                        <h4>Beach Access Path</h4>
+                        <p>Direct path to the sandy shore</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rooms & Interiors -->
+            <h3 class="category-title" style="margin-top: 100px;">Rooms & Interiors</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1158&q=80" alt="Master Bedroom">
+                    <div class="gallery-overlay">
+                        <h4>Master Suite</h4>
+                        <p>King bed with ocean view balcony</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-1" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Guest Room">
+                    <div class="gallery-overlay">
+                        <h4>Guest Room</h4>
+                        <p>Twin beds with garden view</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-2" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1589834390005-5d4fb9bf3d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Bathroom">
+                    <div class="gallery-overlay">
+                        <h4>Luxury Bathroom</h4>
+                        <p>Rain shower and standalone tub</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-3" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Living Area">
+                    <div class="gallery-overlay">
+                        <h4>Living Room</h4>
+                        <p>Spacious seating with entertainment system</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-4" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dressing Room">
+                    <div class="gallery-overlay">
+                        <h4>Walk-in Closet</h4>
+                        <p>Ample storage space</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-5" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Study Room">
+                    <div class="gallery-overlay">
+                        <h4>Study Area</h4>
+                        <p>Peaceful workspace with WiFi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Common Areas -->
+            <h3 class="category-title" style="margin-top: 100px;">Common Areas</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-category="common">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dining Area">
+                    <div class="gallery-overlay">
+                        <h4>Dining Pavilion</h4>
+                        <p>Al fresco dining experience</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-1" data-category="common">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Spa">
+                    <div class="gallery-overlay">
+                        <h4>Wellness Spa</h4>
+                        <p>Ayurvedic treatment rooms</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-2" data-category="common">
+                    <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Kitchen">
+                    <div class="gallery-overlay">
+                        <h4>Professional Kitchen</h4>
+                        <p>Fully equipped for private chef</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-3" data-category="common">
+                    <img src="https://images.unsplash.com/photo-1560185009-dddeb820c5a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Library">
+                    <div class="gallery-overlay">
+                        <h4>Reading Nook</h4>
+                        <p>Curated book collection</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-4" data-category="common">
+                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Game Room">
+                    <div class="gallery-overlay">
+                        <h4>Entertainment Room</h4>
+                        <p>Board games and media center</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-5" data-category="common">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Yoga Deck">
+                    <div class="gallery-overlay">
+                        <h4>Yoga Deck</h4>
+                        <p>Morning sessions with ocean view</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Views from Villa -->
+            <h3 class="category-title" style="margin-top: 100px;">Views from Villa</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-category="views">
+                    <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Sunset">
+                    <div class="gallery-overlay">
+                        <h4>Golden Hour</h4>
+                        <p>Spectacular sunsets over Arabian Sea</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-1" data-category="views">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Ocean View">
+                    <div class="gallery-overlay">
+                        <h4>Ocean Panorama</h4>
+                        <p>180-degree sea views</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-2" data-category="views">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Morning View">
+                    <div class="gallery-overlay">
+                        <h4>Morning Bliss</h4>
+                        <p>Sunrise over calm waters</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-3" data-category="views">
+                    <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Moonlight">
+                    <div class="gallery-overlay">
+                        <h4>Moonlit Sea</h4>
+                        <p>Evening views under stars</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lifestyle Moments -->
+            <h3 class="category-title" style="margin-top: 100px;">Lifestyle Moments</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-category="lifestyle">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Beach Dining">
+                    <div class="gallery-overlay">
+                        <h4>Beach Dinner</h4>
+                        <p>Romantic setup on the sand</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-1" data-category="lifestyle">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Spa Treatment">
+                    <div class="gallery-overlay">
+                        <h4>Wellness Session</h4>
+                        <p>Traditional Ayurvedic therapy</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-2" data-category="lifestyle">
+                    <img src="https://images.unsplash.com/photo-1519677100203-5f3a2b5d0c0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Cooking Class">
+                    <div class="gallery-overlay">
+                        <h4>Cooking Experience</h4>
+                        <p>Learn authentic Kerala cuisine</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-3" data-category="lifestyle">
+                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Family Time">
+                    <div class="gallery-overlay">
+                        <h4>Family Moments</h4>
+                        <p>Creating memories together</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-4" data-category="lifestyle">
+                    <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Yoga Session">
+                    <div class="gallery-overlay">
+                        <h4>Morning Yoga</h4>
+                        <p>Sunrise sessions on the deck</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in delay-5" data-category="lifestyle">
+                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Local Exploration">
+                    <div class="gallery-overlay">
+                        <h4>Cultural Exploration</h4>
+                        <p>Discovering local treasures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience Vadanappilly</h2>
+                <p>Watch our video tour to truly immerse yourself in the beauty of our villa</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-beach-from-above-1159-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vadanappilly Beach Villa</h3>
+                    <p>Experience the ultimate beachfront luxury at our exclusive villa retreat. Where every moment is designed for relaxation and rejuvenation.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Villa</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vadanappally Beach Road, Thrissur,<br>Kerala 680569, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>reservations@vadanapillyvilla.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive offers, seasonal promotions, and villa updates.</p>
+                    <form id="newsletterForm">
+                        <input type="email" class="form-control" placeholder="Your email address" required style="margin-bottom: 12px;">
+                        <button type="submit" class="submit-btn" style="padding: 12px 20px; width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Vadanappilly Beach Villa. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--coral);"></i> for luxury travelers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
