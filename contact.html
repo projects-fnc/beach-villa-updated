@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Vadanappilly Beach Villa</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS VARIABLES & RESET ===== */
+        :root {
+            --ocean-blue: #02367B;
+            --coral: #F44F5F;
+            --seafoam: #77A846;
+            --lavender: #B886B1;
+            --forest: #2F5D50;
+            --sand: #A88C3B;
+            --light-sand: #F9F6F0;
+            --white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --text-light: #5D6D7E;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --shadow-hover: rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-sand);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--ocean-blue);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px var(--shadow);
+            padding: 18px 0;
+            transition: all 0.4s ease;
+        }
+
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 6px 25px var(--shadow-hover);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--ocean-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo i {
+            color: var(--coral);
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--ocean-blue);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--coral);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--coral), var(--ocean-blue));
+            left: 0;
+            bottom: -6px;
+            transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        /* Book Now Button in Navigation */
+        .book-now-nav {
+            background: linear-gradient(135deg, var(--coral), var(--lavender));
+            color: white;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(244, 79, 95, 0.25);
+            display: inline-block;
+            border: none;
+        }
+
+        .book-now-nav:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(244, 79, 95, 0.35);
+            color: white;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 26px;
+            color: var(--ocean-blue);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            transform: rotate(90deg);
+            color: var(--coral);
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        .page-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero p {
+            font-size: 20px;
+            margin-bottom: 35px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 46px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            color: var(--ocean-blue);
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--ocean-blue), var(--seafoam));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 25px auto 0;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        /* ===== CONTACT CONTAINER ===== */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .intro-text {
+            margin-bottom: 40px;
+        }
+
+        .intro-text p {
+            color: var(--text-light);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--ocean-blue), var(--seafoam));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-icon i {
+            font-size: 24px;
+            color: white;
+        }
+
+        .contact-text h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--ocean-blue);
+        }
+
+        .contact-text p {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .contact-text a {
+            color: var(--coral);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            color: var(--ocean-blue);
+            text-decoration: underline;
+        }
+
+        /* ===== ENQUIRY FORM ===== */
+        .enquiry-form {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--ocean-blue);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--ocean-blue);
+            box-shadow: 0 0 0 3px rgba(2, 54, 123, 0.1);
+        }
+
+        .date-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--forest), var(--seafoam));
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(47, 93, 80, 0.2);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(47, 93, 80, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* ===== RESPONSE ASSURANCE ===== */
+        .response-assurance {
+            text-align: center;
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(2, 54, 123, 0.05), rgba(119, 168, 70, 0.05));
+            border-radius: 15px;
+            border-left: 4px solid var(--seafoam);
+        }
+
+        .response-assurance i {
+            color: var(--seafoam);
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .response-assurance h4 {
+            color: var(--ocean-blue);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .response-assurance p {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* ===== MAP SECTION ===== */
+        .map-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(2, 54, 123, 0.03), rgba(244, 79, 95, 0.03));
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            height: 500px;
+            position: relative;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            max-width: 300px;
+        }
+
+        .map-overlay h4 {
+            color: var(--ocean-blue);
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .map-overlay p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--forest);
+            color: white;
+            padding: 80px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--ocean-blue), var(--coral), var(--lavender));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-column h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .contact-info-list {
+            list-style: none;
+        }
+
+        .contact-info-list li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info-list i {
+            color: var(--coral);
+            margin-right: 15px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--coral);
+            color: white;
+            transform: translateY(-8px) rotate(10deg);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 15px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(2, 54, 123, 0.2); }
+            70% { box-shadow: 0 0 0 15px rgba(2, 54, 123, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(2, 54, 123, 0); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-hero h1 {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 25px;
+                box-shadow: 0 15px 30px var(--shadow);
+                border-radius: 0 0 15px 15px;
+                z-index: 100;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                animation: fadeInUp 0.5s ease;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-hero h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 38px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info,
+            .enquiry-form {
+                padding: 30px;
+            }
+            
+            .date-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+            
+            .page-hero {
+                height: 60vh;
+                margin-top: 70px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 32px;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+            
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .contact-icon i {
+                font-size: 20px;
+            }
+            
+            .contact-text h4 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-umbrella-beach"></i> Vadanappilly Beach Villa
+                </a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                    <li><a href="#enquiry" class="book-now-nav">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Contact Us</h1>
+                <p>Get in touch with Vadanappilly Beach Villa. We're here to help plan your perfect coastal getaway.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Reach out to us for bookings, enquiries, or to learn more about our luxury beach villa</p>
+            </div>
+            
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info fade-in">
+                    <div class="intro-text">
+                        <h3>We'd Love to Hear From You</h3>
+                        <p>Whether you're planning your stay, have questions about our amenities, or need assistance with your booking, our team is ready to help. Contact us through any of the channels below, or fill out the enquiry form for a prompt response.</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>Vadanappally Beach Road, Thrissur,<br>Kerala 680569, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                                <p style="font-size: 14px; margin-top: 5px;">Available 9:00 AM - 8:00 PM IST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/919876543210">+91 98765 43210</a></p>
+                                <p style="font-size: 14px; margin-top: 5px;">Quick responses for instant enquiries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email ID</h4>
+                                <p><a href="mailto:reservations@vadanapillyvilla.com">reservations@vadanapillyvilla.com</a></p>
+                                <p style="font-size: 14px; margin-top: 5px;">For booking enquiries and information</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Response Time</h4>
+                                <p>We typically respond within 2-4 hours during business hours. For urgent enquiries, please call or WhatsApp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enquiry Form -->
+                <div class="enquiry-form fade-in" id="enquiry">
+                    <h3 style="margin-bottom: 30px; color: var(--ocean-blue);">Send an Enquiry</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group date-group">
+                            <div>
+                                <label for="checkin">Check-in Date *</label>
+                                <input type="date" id="checkin" name="checkin" class="form-control" required>
+                            </div>
+                            <div>
+                                <label for="checkout">Check-out Date *</label>
+                                <input type="date" id="checkout" name="checkout" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests" class="form-control">
+                                <option value="">Select number of guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                                <option value="7+">7+ Guests</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us about your requirements, special requests, or questions..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            Send Enquiry
+                        </button>
+                    </form>
+                    
+                    <!-- Response Assurance -->
+                    <div class="response-assurance fade-in">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Response Assurance</h4>
+                        <p>We guarantee a response within 24 hours of receiving your enquiry. For urgent matters, we recommend calling or using WhatsApp for immediate assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>Find us in beautiful Vadanappilly, Thrissur</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.132833470483!2d76.17245697498143!3d10.013924490074336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b081a8c93358ddb%3A0x94574809c0e5f4f1!2sVadanappally%20Beach%20Road%2C%20Vadanappally%2C%20Kerala%20680569%2C%20India!5e0!3m2!1sen!2sus!4v1698765432100!5m2!1sen!2sus" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-overlay">
+                    <h4>Vadanappilly Beach Villa</h4>
+                    <p>Vadanappally Beach Road, Thrissur, Kerala 680569, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vadanappilly Beach Villa</h3>
+                    <p>Experience the ultimate beachfront luxury at our exclusive villa retreat. Where every moment is designed for relaxation and rejuvenation.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#enquiry">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vadanappally Beach Road, Thrissur,<br>Kerala 680569, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>reservations@vadanapillyvilla.com</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive offers, seasonal promotions, and villa updates.</p>
+                    <form id="newsletterForm">
+                        <input type="email" class="form-control" placeholder="Your email address" required style="margin-bottom: 12px;">
+                        <button type="submit" class="submit-btn" style="padding: 12px 20px; width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Vadanappilly Beach Villa. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--coral);"></i> for luxury travelers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== MOBILE MENU TOGGLE =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = mobileMenuBtn?.querySelector('i');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (menuIcon) {
+                        menuIcon.classList.toggle('fa-bars');
+                        menuIcon.classList.toggle('fa-times');
+                    }
+                });
+            }
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    if (menuIcon) {
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            });
+
+            // ===== HEADER SCROLL EFFECT =====
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('header');
+                if (header) {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                }
+                
+                // Animate elements on scroll
+                animateOnScroll();
+            });
+
+            // ===== DATE VALIDATION =====
+            // Set minimum date for check-in to today
+            const checkinInput = document.getElementById('checkin');
+            if (checkinInput) {
+                const today = new Date().toISOString().split('T')[0];
+                checkinInput.min = today;
+                
+                // Update checkout min date when checkin changes
+                checkinInput.addEventListener('change', function() {
+                    const checkoutInput = document.getElementById('checkout');
+                    if (checkoutInput) {
+                        checkoutInput.min = this.value;
+                        
+                        // Ensure checkout is after checkin
+                        if (checkoutInput.value && checkoutInput.value <= this.value) {
+                            checkoutInput.value = '';
+                        }
+                    }
+                });
+            }
+
+            // ===== FORM HANDLING =====
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Validate form
+                    if (!validateContactForm()) {
+                        return;
+                    }
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const formObject = Object.fromEntries(formData.entries());
+                    
+                    // Disable submit button and show loading
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    
+                    // Simulate API call (replace with actual API call)
+                    setTimeout(() => {
+                        // Show success message
+                        showSuccessMessage(formObject);
+                        
+                        // Reset form
+                        contactForm.reset();
+                        
+                        // Re-enable button
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Enquiry';
+                    }, 2000);
+                });
+            }
+
+            // ===== NEWSLETTER FORM =====
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Subscribing...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate API call
+                    setTimeout(() => {
+                        alert(`Thank you for subscribing with ${email}! You'll receive our exclusive offers soon.`);
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        this.reset();
+                    }, 1000);
+                });
+            }
+
+            // Initialize animations
+            initAnimations();
+        });
+
+        // ===== FORM VALIDATION =====
+        function validateContactForm() {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const message = document.getElementById('message').value.trim();
+            
+            // Name validation
+            if (name.length < 2) {
+                alert('Please enter a valid name (minimum 2 characters).');
+                return false;
+            }
+            
+            // Phone validation (simple Indian phone number check)
+            const phoneRegex = /^[6-9]\d{9}$/;
+            if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
+                alert('Please enter a valid Indian phone number (10 digits starting with 6-9).');
+                return false;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            
+            // Date validation
+            if (!checkin) {
+                alert('Please select a check-in date.');
+                return false;
+            }
+            
+            if (!checkout) {
+                alert('Please select a check-out date.');
+                return false;
+            }
+            
+            const checkinDate = new Date(checkin);
+            const checkoutDate = new Date(checkout);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            if (checkinDate < today) {
+                alert('Check-in date cannot be in the past.');
+                return false;
+            }
+            
+            if (checkoutDate <= checkinDate) {
+                alert('Check-out date must be after check-in date.');
+                return false;
+            }
+            
+            // Message validation
+            if (message.length < 10) {
+                alert('Please enter a message with at least 10 characters.');
+                return false;
+            }
+            
+            return true;
+        }
+
+        // ===== SHOW SUCCESS MESSAGE =====
+        function showSuccessMessage(formData) {
+            // Create success message element
+            const successMessage = document.createElement('div');
+            successMessage.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, var(--seafoam), var(--ocean-blue));
+                color: white;
+                padding: 20px 30px;
+                border-radius: 10px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+                animation: slideIn 0.5s ease;
+                max-width: 400px;
+            `;
+            
+            successMessage.innerHTML = `
+                <h4 style="margin-bottom: 10px; font-size: 18px;"><i class="fas fa-check-circle" style="margin-right: 10px;"></i>Enquiry Sent Successfully!</h4>
+                <p style="font-size: 14px; opacity: 0.9;">Thank you ${formData.name}! We've received your enquiry and will contact you at ${formData.phone} or ${formData.email} within 24 hours.</p>
+            `;
+            
+            document.body.appendChild(successMessage);
+            
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.animation = 'slideOut 0.5s ease';
+                setTimeout(() => {
+                    if (successMessage.parentNode) {
+                        successMessage.parentNode.removeChild(successMessage);
+                    }
+                }, 500);
+            }, 5000);
+            
+            // Add animation keyframes
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+                
+                @keyframes slideOut {
+                    from {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    to {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // ===== ANIMATION ON SCROLL =====
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // ===== INITIALIZE ANIMATIONS =====
+        function initAnimations() {
+            // Add animation classes to elements
+            document.querySelectorAll('.contact-info, .enquiry-form, .response-assurance').forEach((el) => {
+                el.classList.add('fade-in');
+            });
+            
+            // Trigger initial animation check
+            animateOnScroll();
+        }
+
+        // ===== WHATSAPP DIRECT LINK =====
+        function openWhatsApp() {
+            const phone = '919876543210';
+            const message = 'Hello, I would like to enquire about Vadanappilly Beach Villa.';
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
