@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vadanappilly Beach Villa | Luxury Coastal Retreat</title>
+    <title>Vadanappilly Beach Villa | Luxury Beachfront Stay</title>
     
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,7 +11,6 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
     <!-- Header -->
@@ -25,24 +24,27 @@
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#booking" class="book-now-nav">Book Now</a></li>
+                    <li><a href="contact.html#enquiry" class="book-now-nav">Book Now</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="home-hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="typing-animation">Experience Coastal Luxury at Vadanappilly</h1>
-                <p>Where golden sands meet azure waters, our exclusive beach villa offers an unparalleled retreat designed for relaxation, rejuvenation, and unforgettable moments.</p>
-                <a href="#booking" class="hero-btn floating">Reserve Your Paradise</a>
+            <div class="home-hero-content">
+                <h1>Experience Luxury at Vadanappilly Beach Villa</h1>
+                <p>Your exclusive beachfront retreat in the heart of Kerala's pristine coastline. Where golden sands meet azure waters for an unforgettable coastal escape.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html#enquiry" class="hero-btn">Book Your Stay</a>
+                    <a href="contact.html" class="hero-btn secondary">Contact Us</a>
+                </div>
             </div>
         </div>
         <div class="wave-decoration">
@@ -52,23 +54,23 @@
         </div>
     </section>
 
-    <!-- About Villa Section -->
-    <section class="section" id="about">
+    <!-- About the Villa Section -->
+    <section class="section" id="about-villa">
         <div class="container">
             <div class="section-title">
-                <h2>Welcome to Vadanappilly</h2>
-                <p>Discover our coastal sanctuary where luxury meets natural beauty in perfect harmony.</p>
+                <h2>About Vadanappilly Beach Villa</h2>
+                <p>A luxurious beachfront sanctuary designed for ultimate relaxation and memorable experiences</p>
             </div>
             <div class="about-content">
-                <div class="about-image slide-in-left">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Villa Exterior">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Vadanappilly Beach Villa Exterior">
                 </div>
-                <div class="about-text slide-in-right">
+                <div class="about-text fade-in">
                     <h3>Your Coastal Sanctuary Awaits</h3>
-                    <p>Nestled along a pristine stretch of Kerala's coastline, Vadanappilly Beach Villa offers an exclusive retreat where the rhythm of ocean waves becomes your daily soundtrack.</p>
-                    <p>Each villa is meticulously designed to maximize ocean views while providing utmost privacy and comfort. From the moment you arrive, you'll be enveloped in an atmosphere of serenity and sophistication.</p>
+                    <p>Nestled along the pristine shores of Vadanappilly, our exclusive beach villa offers a perfect blend of traditional Kerala charm and modern luxury. Designed with meticulous attention to detail, every aspect of your stay is crafted for comfort and relaxation.</p>
+                    <p>Wake up to the soothing sound of waves, enjoy panoramic ocean views from your private balcony, and experience personalized hospitality that makes you feel truly at home.</p>
                     <div class="highlight-box">
-                        <p><i class="fas fa-quote-left" style="color: var(--ocean-blue); margin-right: 10px;"></i>Vadanappilly isn't just a destination—it's an experience that stays with you long after you return home.</p>
+                        <p><i class="fas fa-quote-left" style="color: var(--ocean-blue); margin-right: 10px;"></i>More than just accommodation, Vadanappilly Beach Villa offers an experience that rejuvenates your mind, body, and soul.</p>
                     </div>
                 </div>
             </div>
@@ -83,80 +85,146 @@
                 <p>Unforgettable moments crafted with luxury and comfort</p>
             </div>
             <div class="amenities-container">
-                <div class="amenity-card-new fade-in delay-1">
+                <div class="amenity-card fade-in">
                     <div class="amenity-icon-wrapper">
                         <i class="fas fa-bed"></i>
                     </div>
-                    <h3>Luxurious Rooms</h3>
-                    <p>Spacious suites with panoramic ocean views, premium bedding, and private balconies.</p>
+                    <h3>Luxurious Accommodation</h3>
+                    <p>Spacious suites with panoramic ocean views, premium bedding, air conditioning, and private balconies.</p>
                 </div>
-                <div class="amenity-card-new fade-in delay-2">
+                <div class="amenity-card fade-in">
                     <div class="amenity-icon-wrapper">
                         <i class="fas fa-swimming-pool"></i>
                     </div>
                     <h3>Infinity Pool</h3>
-                    <p>Stunning infinity-edge pool that appears to merge with the ocean horizon.</p>
+                    <p>Stunning infinity-edge pool overlooking the Arabian Sea, with comfortable loungers and poolside service.</p>
                 </div>
-                <div class="amenity-card-new fade-in delay-3">
+                <div class="amenity-card fade-in">
                     <div class="amenity-icon-wrapper">
                         <i class="fas fa-utensils"></i>
                     </div>
-                    <h3>Private Chef</h3>
-                    <p>Customized culinary experiences with our chef specializing in Kerala cuisine.</p>
+                    <h3>Private Chef Service</h3>
+                    <p>Customized culinary experiences with our chef specializing in authentic Kerala cuisine and international dishes.</p>
                 </div>
-                <div class="amenity-card-new fade-in delay-4">
+                <div class="amenity-card fade-in">
                     <div class="amenity-icon-wrapper">
                         <i class="fas fa-spa"></i>
                     </div>
-                    <h3>Wellness Spa</h3>
-                    <p>Authentic Ayurvedic treatments and wellness therapies overlooking the ocean.</p>
+                    <h3>Wellness & Spa</h3>
+                    <p>Authentic Ayurvedic treatments and wellness therapies in our serene spa overlooking the ocean.</p>
                 </div>
-                <div class="amenity-card-new fade-in delay-5">
+                <div class="amenity-card fade-in">
                     <div class="amenity-icon-wrapper">
                         <i class="fas fa-water"></i>
                     </div>
-                    <h3>Beach Access</h3>
-                    <p>Direct, private access to pristine sandy beaches with complimentary amenities.</p>
+                    <h3>Private Beach Access</h3>
+                    <p>Direct, exclusive access to pristine sandy beaches with complimentary sun loungers and umbrellas.</p>
                 </div>
-                <div class="amenity-card-new fade-in delay-6">
+                <div class="amenity-card fade-in">
                     <div class="amenity-icon-wrapper">
                         <i class="fas fa-concierge-bell"></i>
                     </div>
                     <h3>24/7 Concierge</h3>
-                    <p>Personalized service to arrange excursions, transportation, and special experiences.</p>
+                    <p>Personalized service to arrange excursions, transportation, and special experiences throughout your stay.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
+    <!-- Why Choose Vadanappilly Beach Villa -->
     <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose Vadanappilly</h2>
-                <p>Key highlights that make our villa unique</p>
+                <h2>Why Choose Vadanappilly Beach Villa</h2>
+                <p>Key highlights that make our villa the perfect coastal retreat</p>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Prime Location</h3>
+                    <p>Located in serene Vadanappilly, Thrissur - away from tourist crowds yet easily accessible.</p>
+                </div>
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Complete Privacy</h3>
+                    <p>Exclusive property ensuring your privacy and peace throughout your stay.</p>
+                </div>
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Personalized Service</h3>
+                    <p>Dedicated staff committed to making your stay memorable and comfortable.</p>
+                </div>
+                <div class="why-choose-card fade-in">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainable Luxury</h3>
+                    <p>Eco-friendly practices combined with luxurious amenities for responsible tourism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Advantage -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(119, 168, 70, 0.03), rgba(184, 134, 177, 0.03));">
+        <div class="container">
+            <div class="section-title">
+                <h2>Location Advantage</h2>
+                <p>Discover the beauty of Vadanappilly, Thrissur</p>
             </div>
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Location Advantage</h3>
-                    <p>Located in the serene Vadanappilly area of Thrissur, our villa offers the perfect balance between tranquil seclusion and convenient access to local attractions.</p>
+                <div class="about-text fade-in">
+                    <h3>Serene Coastal Paradise</h3>
+                    <p>Vadanappilly offers the perfect balance between tranquil seclusion and convenient access to Kerala's cultural heritage. Our villa is strategically located to provide:</p>
                     <ul style="margin-top: 20px; list-style: none;">
                         <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
                             <i class="fas fa-check-circle" style="color: var(--seafoam); margin-right: 10px; margin-top: 5px;"></i>
-                            <span>Direct beach access with private shoreline</span>
+                            <span>Direct access to pristine, uncrowded beaches</span>
                         </li>
                         <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
                             <i class="fas fa-check-circle" style="color: var(--seafoam); margin-right: 10px; margin-top: 5px;"></i>
-                            <span>Proximity to cultural landmarks and local markets</span>
+                            <span>Proximity to cultural landmarks and traditional markets</span>
                         </li>
                         <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
                             <i class="fas fa-check-circle" style="color: var(--seafoam); margin-right: 10px; margin-top: 5px;"></i>
-                            <span>Peaceful environment away from crowded tourist areas</span>
+                            <span>Peaceful environment away from commercial tourist areas</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--seafoam); margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Easy access to Thrissur's famous temples and cultural sites</span>
                         </li>
                     </ul>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Vadanappilly Location">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Vadanappilly Beach Location">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest-Focused Lifestyle -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Guest-Focused Lifestyle</h2>
+                <p>Designed for your peace, comfort, and unforgettable experiences</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Relaxing at the Beach Villa">
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Your Peaceful Coastal Retreat</h3>
+                    <p>At Vadanappilly Beach Villa, we understand that true luxury lies in personalized experiences and peaceful moments. Our guest-focused approach includes:</p>
+                    <p><strong>Beach Access:</strong> Step directly from your villa onto soft, golden sands. Enjoy sunrise walks, sunset views, and private beach dinners under the stars.</p>
+                    <p><strong>Flexible Scheduling:</strong> No rigid meal times or activity schedules. Your vacation revolves entirely around your preferences and pace.</p>
+                    <p><strong>Cultural Immersion:</strong> Experience authentic Kerala through curated cultural activities, cooking classes, and local interactions.</p>
                 </div>
             </div>
         </div>
@@ -167,28 +235,28 @@
         <div class="container">
             <div class="section-title">
                 <h2>Gallery Preview</h2>
-                <p>A glimpse into the beauty that awaits you</p>
+                <p>A glimpse into the beauty that awaits you at Vadanappilly</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item fade-in">
                     <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1158&q=80" alt="Luxury Bedroom">
                     <div class="gallery-overlay">
                         <h4>Master Suite</h4>
-                        <p>King bed with ocean view</p>
+                        <p>Ocean view bedrooms</p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in delay-1">
+                <div class="gallery-item fade-in">
                     <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dining Area">
                     <div class="gallery-overlay">
                         <h4>Al Fresco Dining</h4>
-                        <p>Private chef experiences</p>
+                        <p>Beachside meals</p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in delay-2">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Spa">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Sunset View">
                     <div class="gallery-overlay">
-                        <h4>Wellness Spa</h4>
-                        <p>Ayurvedic treatments</p>
+                        <h4>Golden Hour</h4>
+                        <p>Spectacular sunsets</p>
                     </div>
                 </div>
             </div>
@@ -198,58 +266,22 @@
         </div>
     </section>
 
-    <!-- Booking Section -->
-    <section class="section" id="booking">
+    <!-- Contact/Enquiry Prompt -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(2, 54, 123, 0.05), rgba(244, 79, 95, 0.05));">
         <div class="container">
             <div class="section-title">
-                <h2>Plan Your Escape</h2>
-                <p>Begin your journey to coastal luxury. Check availability and reserve your dates.</p>
+                <h2>Ready for Your Coastal Escape?</h2>
+                <p>Contact us to plan your perfect stay at Vadanappilly Beach Villa</p>
             </div>
-            <div class="booking-section">
-                <div class="booking-container">
-                    <form class="booking-form" id="bookingForm">
-                        <div class="form-group">
-                            <label for="checkin">Check-In Date</label>
-                            <input type="date" id="checkin" name="checkin" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="checkout">Check-Out Date</label>
-                            <input type="date" id="checkout" name="checkout" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="guests">Guests</label>
-                            <select id="guests" name="guests" class="form-control" required>
-                                <option value="1">1 Guest</option>
-                                <option value="2" selected>2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4 Guests</option>
-                                <option value="5">5+ Guests</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="villaType">Villa Type</label>
-                            <select id="villaType" name="villaType" class="form-control" required>
-                                <option value="ocean-view">Ocean View Suite</option>
-                                <option value="beachfront">Beachfront Villa</option>
-                                <option value="premium-suite">Premium Suite</option>
-                                <option value="executive">Executive Villa</option>
-                            </select>
-                        </div>
-                        <div class="form-group full-width">
-                            <label for="specialRequests">Special Requests</label>
-                            <textarea id="specialRequests" name="specialRequests" class="form-control" rows="4" placeholder="Any special requirements, celebrations, or requests..."></textarea>
-                        </div>
-                        <div class="form-group full-width">
-                            <button type="submit" class="submit-btn">Check Availability & Reserve</button>
-                        </div>
-                    </form>
-                </div>
+            <div style="text-align: center;">
+                <a href="contact.html" class="hero-btn" style="margin-right: 20px;">Send Enquiry</a>
+                <a href="contact.html#enquiry" class="hero-btn secondary">Check Availability</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
@@ -266,10 +298,11 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Villa</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#enquiry">Book Now</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -306,6 +339,5 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-    <script src="js/booking-engine.js"></script>
 </body>
 </html>
