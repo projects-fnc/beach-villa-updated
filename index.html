@@ -11,6 +11,80 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Add this inline CSS to override for transparent effect -->
+    <style>
+        /* Override for transparent header on home page */
+        header {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(15px) !important;
+            -webkit-backdrop-filter: blur(15px) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+        }
+        
+        /* Make logo and nav links more visible on transparent background */
+        .logo {
+            color: white !important;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo i {
+            color: white !important;
+        }
+        
+        .nav-links a {
+            color: white !important;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-links a:hover {
+            color: var(--coral) !important;
+        }
+        
+        .nav-links a.active {
+            color: var(--coral) !important;
+        }
+        
+        .mobile-menu-btn {
+            color: white !important;
+        }
+        
+        /* When scrolled, revert to normal colors */
+        header.scrolled .logo {
+            color: var(--ocean-blue) !important;
+            text-shadow: none;
+        }
+        
+        header.scrolled .logo i {
+            color: var(--coral) !important;
+        }
+        
+        header.scrolled .nav-links a {
+            color: var(--ocean-blue) !important;
+            text-shadow: none;
+        }
+        
+        header.scrolled .mobile-menu-btn {
+            color: var(--ocean-blue) !important;
+        }
+        
+        /* Adjust hero section to account for transparent header */
+        .home-hero {
+            margin-top: 0 !important;
+            height: 100vh;
+        }
+        
+        /* Make sure content starts right after header */
+        .home-hero-content {
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
