@@ -64,7 +64,17 @@ header.scrolled {
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 20px var(--shadow-hover);
 }
+body.home-page header,
+.index-page header {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent for home page */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
 
+/* For other pages, make it solid */
+body:not(.home-page):not(.index-page) header {
+    background-color: rgba(255, 255, 255, 0.98);
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -997,3 +1007,4 @@ footer:before {
         margin-top: 60px;
     }
 }
+
