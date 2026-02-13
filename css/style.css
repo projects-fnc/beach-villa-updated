@@ -888,6 +888,164 @@ footer:before {
     opacity: 1;
     transform: translateY(0);
 }
+/* --- Base Footer Styles --- */
+footer {
+    background-color: #2b4d3f; /* Deep, elegant green */
+    color: #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Replace with your site's font */
+    padding: 60px 0 20px;
+    line-height: 1.6;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Layout: CSS Grid for perfect column alignment --- */
+.footer-content {
+    display: grid;
+    /* This automatically stacks columns on mobile and puts them side-by-side on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* --- Headings & Paragraphs --- */
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Small underline accent beneath headings */
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #a3b899; 
+}
+
+.brand-column p {
+    color: #cbd5e1;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* --- Social Icons --- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #ffffff;
+    color: #2b4d3f;
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* --- Quick Links --- */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    transform: translateX(5px); /* Slides right slightly on hover */
+}
+
+/* --- Contact Info --- */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex; /* Aligns icons perfectly with multi-line text */
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+.contact-info i {
+    margin-top: 5px; /* Pushes the icon down slightly to align with text */
+    color: #a3b899;
+    font-size: 18px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #a3b899;
+}
+
+/* Fix for long phone numbers */
+.phone-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* --- Copyright Bar --- */
+.copyright {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.copyright .fa-heart {
+    color: #ef4444; /* Red heart */
+    margin: 0 4px;
+}
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1200px) {
@@ -1009,4 +1167,5 @@ footer:before {
         margin-top: 60px;
     }
 }
+
 
