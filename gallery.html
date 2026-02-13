@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Vadanappilly Beach Villa</title>
+    <title>Gallery | Vadanapilly Beach Villa - Kerala Beachfront Luxury</title>
+    <meta name="description" content="Explore the beauty of Vadanapilly Beach Villa through our gallery. See the villa, beach, interiors, and surrounding landscapes.">
     
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -43,8 +44,8 @@
         
         .gallery-filter {
             background: white;
-            border: 2px solid var(--ocean-blue);
-            color: var(--ocean-blue);
+            border: 2px solid var(--primary-dark);
+            color: var(--primary-dark);
             padding: 10px 25px;
             border-radius: 30px;
             font-weight: 600;
@@ -54,70 +55,20 @@
         
         .gallery-filter:hover,
         .gallery-filter.active {
-            background: var(--ocean-blue);
+            background: var(--primary-dark);
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(2, 54, 123, 0.2);
+            box-shadow: 0 5px 15px rgba(92, 118, 80, 0.2);
         }
         
         .gallery-section {
-            background: linear-gradient(135deg, rgba(249, 246, 240, 0.5), rgba(249, 246, 240, 0.8));
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            height: 280px;
-            box-shadow: 0 10px 20px var(--shadow);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px var(--shadow-hover);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-            color: white;
-            transform: translateY(20px);
-            opacity: 0;
-            transition: all 0.4s ease;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-            opacity: 1;
+            background: linear-gradient(135deg, rgba(206, 193, 180, 0.5), rgba(206, 193, 180, 0.8));
         }
         
         .category-title {
             text-align: center;
             margin: 80px 0 40px;
-            color: var(--ocean-blue);
+            color: var(--primary-dark);
             font-size: 36px;
             position: relative;
             display: inline-block;
@@ -130,7 +81,7 @@
             position: absolute;
             width: 60px;
             height: 4px;
-            background: linear-gradient(to right, var(--coral), var(--lavender));
+            background: linear-gradient(to right, var(--primary-medium), var(--primary-dark));
             bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
@@ -139,7 +90,7 @@
         
         .video-section {
             padding: 80px 0;
-            background: linear-gradient(135deg, rgba(2, 54, 123, 0.05), rgba(119, 168, 70, 0.05));
+            background: linear-gradient(135deg, rgba(92, 118, 80, 0.05), rgba(163, 177, 138, 0.05));
         }
         
         .video-container {
@@ -162,7 +113,7 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
-                    <i class="fas fa-umbrella-beach"></i> Vadanappilly Beach Villa
+                    <i class="fas fa-umbrella-beach"></i> Vadanapilly Beach Villa
                 </a>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -172,7 +123,7 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="gallery.html" class="active">Gallery</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="index.html#booking" class="book-now-nav">Book Now</a></li>
+                    <li><a href="tel:+919876543210" class="book-now-nav">Book Now</a></li>
                 </ul>
             </nav>
         </div>
@@ -183,7 +134,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Our Gallery</h1>
-                <p>Immerse yourself in the beauty of Vadanappilly through stunning visuals</p>
+                <p>Immerse yourself in the beauty of Vadanapilly through stunning visuals</p>
             </div>
         </div>
     </section>
@@ -196,8 +147,7 @@
                 <button class="gallery-filter" data-filter="exterior">Exterior & Beach</button>
                 <button class="gallery-filter" data-filter="rooms">Rooms & Interiors</button>
                 <button class="gallery-filter" data-filter="common">Common Areas</button>
-                <button class="gallery-filter" data-filter="views">Views from Villa</button>
-                <button class="gallery-filter" data-filter="lifestyle">Lifestyle Moments</button>
+                <!-- "views" and "lifestyle" filters removed -->
             </div>
 
             <!-- Exterior & Beachfront -->
@@ -341,85 +291,8 @@
                 </div>
             </div>
 
-            <!-- Views from Villa -->
-            <h3 class="category-title" style="margin-top: 100px;">Views from Villa</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item fade-in" data-category="views">
-                    <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Sunset">
-                    <div class="gallery-overlay">
-                        <h4>Golden Hour</h4>
-                        <p>Spectacular sunsets over Arabian Sea</p>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in delay-1" data-category="views">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Ocean View">
-                    <div class="gallery-overlay">
-                        <h4>Ocean Panorama</h4>
-                        <p>180-degree sea views</p>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in delay-2" data-category="views">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Morning View">
-                    <div class="gallery-overlay">
-                        <h4>Morning Bliss</h4>
-                        <p>Sunrise over calm waters</p>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in delay-3" data-category="views">
-                    <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Moonlight">
-                    <div class="gallery-overlay">
-                        <h4>Moonlit Sea</h4>
-                        <p>Evening views under stars</p>
-                    </div>
-                </div>
-            </div>
+            <!-- Views from Villa and Lifestyle Moments sections removed -->
 
-            <!-- Lifestyle Moments -->
-            <h3 class="category-title" style="margin-top: 100px;">Lifestyle Moments</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item fade-in" data-category="lifestyle">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Beach Dining">
-                    <div class="gallery-overlay">
-                        <h4>Beach Dinner</h4>
-                        <p>Romantic setup on the sand</p>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in delay-1" data-category="lifestyle">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Spa Treatment">
-                    <div class="gallery-overlay">
-                        <h4>Wellness Session</h4>
-                        <p>Traditional Ayurvedic therapy</p>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in delay-2" data-category="lifestyle">
-                    <img src="https://images.unsplash.com/photo-1519677100203-5f3a2b5d0c0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Cooking Class">
-                    <div class="gallery-overlay">
-                        <h4>Cooking Experience</h4>
-                        <p>Learn authentic Kerala cuisine</p>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in delay-3" data-category="lifestyle">
-                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Family Time">
-                    <div class="gallery-overlay">
-                        <h4>Family Moments</h4>
-                        <p>Creating memories together</p>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in delay-4" data-category="lifestyle">
-                    <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Yoga Session">
-                    <div class="gallery-overlay">
-                        <h4>Morning Yoga</h4>
-                        <p>Sunrise sessions on the deck</p>
-                    </div>
-                </div>
-                <div class="gallery-item fade-in delay-5" data-category="lifestyle">
-                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Local Exploration">
-                    <div class="gallery-overlay">
-                        <h4>Cultural Exploration</h4>
-                        <p>Discovering local treasures</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -427,7 +300,7 @@
     <section class="video-section">
         <div class="container">
             <div class="section-title">
-                <h2>Experience Vadanappilly</h2>
+                <h2>Experience Vadanapilly</h2>
                 <p>Watch our video tour to truly immerse yourself in the beauty of our villa</p>
             </div>
             <div class="video-container">
@@ -444,7 +317,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Vadanappilly Beach Villa</h3>
+                    <h3>Vadanapilly Beach Villa</h3>
                     <p>Experience the ultimate beachfront luxury at our exclusive villa retreat. Where every moment is designed for relaxation and rejuvenation.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -461,6 +334,7 @@
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="tel:+919876543210">Book Now</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -468,29 +342,21 @@
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Vadanappally Beach Road, Thrissur,<br>Kerala 680569, India</span>
+                            <span>Vadanapilly Beach Road, Thrissur,<br>Kerala 680569, India</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
-                            <span>+91 98765 43210</span>
+                            <span><a href="tel:+919876543210" style="color: white; text-decoration: none;">+91 98765 43210</a></span>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span>reservations@vadanapillyvilla.com</span>
+                            <span><a href="mailto:reservations@vadanapillyvilla.com" style="color: white; text-decoration: none;">reservations@vadanapillyvilla.com</a></span>
                         </li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe for exclusive offers, seasonal promotions, and villa updates.</p>
-                    <form id="newsletterForm">
-                        <input type="email" class="form-control" placeholder="Your email address" required style="margin-bottom: 12px;">
-                        <button type="submit" class="submit-btn" style="padding: 12px 20px; width: 100%;">Subscribe</button>
-                    </form>
-                </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Vadanappilly Beach Villa. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--coral);"></i> for luxury travelers</p>
+                <p>&copy; 2023 Vadanapilly Beach Villa. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary-light);"></i> for luxury travelers</p>
             </div>
         </div>
     </footer>
@@ -499,5 +365,4 @@
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>
 </body>
-
 </html>
