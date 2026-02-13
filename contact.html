@@ -6,11 +6,9 @@
     <title>Contact Us | Vadanapilly Beach Villa - Kerala Luxury Beachfront</title>
     <meta name="description" content="Get in touch with Vadanapilly Beach Villa for bookings, enquiries, or any questions. We're here to help plan your perfect coastal getaway.">
     
-    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     
     <style>
@@ -171,10 +169,160 @@
                 height: 400px;
             }
         }
+
+        /* ===== FOOTER STYLES ===== */
+        footer {
+            background-color: #2b4d3f; 
+            color: #e2e8f0;
+            font-family: 'Poppins', sans-serif; 
+            padding: 60px 0 20px;
+            line-height: 1.6;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #a3b899; 
+        }
+
+        .brand-column p {
+            color: #cbd5e1;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #ffffff;
+            color: #2b4d3f;
+            transform: translateY(-3px); 
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px); 
+        }
+
+        .footer-contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact-info li {
+            display: flex; 
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #cbd5e1;
+        }
+
+        .footer-contact-info i {
+            margin-top: 5px; 
+            color: #a3b899;
+            font-size: 18px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .footer-contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact-info a:hover {
+            color: #a3b899;
+        }
+
+        .phone-numbers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright p {
+            margin: 0;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .copyright .fa-heart {
+            color: #ef4444; 
+            margin: 0 4px;
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
@@ -195,7 +343,6 @@
         </div>
     </header>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
             <div class="page-hero-content">
@@ -205,7 +352,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="section contact-section">
         <div class="container">
             <div class="section-title">
@@ -214,7 +360,6 @@
             </div>
             
             <div class="contact-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: start;">
-                <!-- Contact Information (updated) -->
                 <div class="contact-info fade-in">
                     <div class="intro-text">
                         <h3>We'd Love to Hear From You</h3>
@@ -281,7 +426,6 @@
                     </div>
                 </div>
                 
-                <!-- Enquiry Form (Response Assurance removed) -->
                 <div class="enquiry-form fade-in" id="enquiry">
                     <h3 style="margin-bottom: 30px; color: var(--primary-dark);">Send an Enquiry</h3>
                     <form id="contactForm">
@@ -334,13 +478,11 @@
                             Send Enquiry
                         </button>
                     </form>
-                    <!-- Response assurance div removed -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
     <section class="map-section">
         <div class="container">
             <div class="section-title">
@@ -357,220 +499,63 @@
             </div>
         </div>
     </section>
-/* --- Base Footer Styles --- */
-footer {
-    background-color: #2b4d3f; /* Deep, elegant green */
-    color: #e2e8f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Replace with your site's font */
-    padding: 60px 0 20px;
-    line-height: 1.6;
-}
 
-footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* --- Layout: CSS Grid for perfect column alignment --- */
-.footer-content {
-    display: grid;
-    /* This automatically stacks columns on mobile and puts them side-by-side on desktop */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-/* --- Headings & Paragraphs --- */
-.footer-column h3 {
-    color: #ffffff;
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-/* Small underline accent beneath headings */
-.footer-column h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background-color: #a3b899; 
-}
-
-.brand-column p {
-    color: #cbd5e1;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-/* --- Social Icons --- */
-.social-icons {
-    display: flex;
-    gap: 12px;
-}
-
-.social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-    background-color: #ffffff;
-    color: #2b4d3f;
-    transform: translateY(-3px); /* Subtle lift effect */
-}
-
-/* --- Quick Links --- */
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-    transform: translateX(5px); /* Slides right slightly on hover */
-}
-
-/* --- Contact Info --- */
-.contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info li {
-    display: flex; /* Aligns icons perfectly with multi-line text */
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 15px;
-    color: #cbd5e1;
-}
-
-.contact-info i {
-    margin-top: 5px; /* Pushes the icon down slightly to align with text */
-    color: #a3b899;
-    font-size: 18px;
-    min-width: 20px;
-    text-align: center;
-}
-
-.contact-info a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: #a3b899;
-}
-
-/* Fix for long phone numbers */
-.phone-numbers {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-/* --- Copyright Bar --- */
-.copyright {
-    text-align: center;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.copyright p {
-    margin: 0;
-    font-size: 14px;
-    color: #94a3b8;
-}
-
-.copyright .fa-heart {
-    color: #ef4444; /* Red heart */
-    margin: 0 4px;
-}
-   <footer>
-    <div class="container">
-        <div class="footer-content">
-            
-            <div class="footer-column brand-column">
-                <h3>Vadanapilly Beach Villa</h3>
-                <p>Experience the ultimate beachfront luxury at our exclusive villa retreat. Where every moment is designed for relaxation and rejuvenation.</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-column brand-column">
+                    <h3>Vadanapilly Beach Villa</h3>
+                    <p>Experience the ultimate beachfront luxury at our exclusive villa retreat. Where every moment is designed for relaxation and rejuvenation.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="footer-column links-column">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="tel:+919400311402">Book Now</a></li>
-                </ul>
-            </div>
+                <div class="footer-column links-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="tel:+919400311402">Book Now</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-column contact-column">
-                <h3>Contact Info</h3>
-                <ul class="contact-info">
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Chilanka Beach Rd, Vadanapally, Vyasa Nagar,<br>Vadanappally, Thrissur, Kerala 680569, India</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone-alt"></i>
-                        <span class="phone-numbers">
-                            <a href="tel:+919400311402">+91 94003 11402</a> | 
-                            <a href="tel:+917306070655">+91 73060 70655</a> | 
-                            <a href="tel:+919567888548">+91 95678 88548</a>
-                        </span>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <span><a href="mailto:vadanapallybeachresort@gmail.com">vadanapallybeachresort@gmail.com</a></span>
-                    </li>
-                </ul>
+                <div class="footer-column contact-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chilanka Beach Rd, Vadanapally, Vyasa Nagar,<br>Vadanappally, Thrissur, Kerala 680569, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="phone-numbers">
+                                <a href="tel:+919400311402">+91 94003 11402</a> | 
+                                <a href="tel:+917306070655">+91 73060 70655</a> | 
+                                <a href="tel:+919567888548">+91 95678 88548</a>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:vadanapallybeachresort@gmail.com">vadanapallybeachresort@gmail.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
             
+            <div class="copyright">
+                <p>© 2026 Vadanapilly Beach Villa. All rights reserved. | Designed with <i class="fas fa-heart"></i> for luxury travelers</p>
+            </div>
         </div>
-        
-        <div class="copyright">
-            <p>&copy; 2026 Vadanapilly Beach Villa. All rights reserved. | Designed with <i class="fas fa-heart"></i> for luxury travelers</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         // Mobile menu toggle, scroll effects, form validation etc. (same as before)
@@ -579,4 +564,3 @@ footer .container {
     <script src="js/main.js"></script>
 </body>
 </html>
-
