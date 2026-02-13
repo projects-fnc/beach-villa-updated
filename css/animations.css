@@ -91,9 +91,9 @@
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 3px solid rgba(2, 54, 123, 0.3);
+    border: 3px solid rgba(92, 118, 80, 0.3);
     border-radius: 50%;
-    border-top-color: var(--ocean-blue);
+    border-top-color: var(--primary-dark);
     animation: spin 1s ease-in-out infinite;
 }
 
@@ -104,7 +104,7 @@
 /* Text Animation */
 .typing-animation {
     overflow: hidden;
-    border-right: 2px solid var(--ocean-blue);
+    border-right: 2px solid var(--primary-dark);
     white-space: nowrap;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
@@ -116,7 +116,7 @@
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: var(--ocean-blue); }
+    50% { border-color: var(--primary-dark); }
 }
 
 /* Wave Animation */
