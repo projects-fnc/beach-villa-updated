@@ -121,7 +121,7 @@ function initAnimations() {
 
 // Form handling
 function initForms() {
-    // Newsletter Form
+    // Newsletter Form (removed from footer, but keep function for any remaining forms)
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
