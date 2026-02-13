@@ -5,7 +5,7 @@
     --primary-light: #DAD7CD;       /* light sage */
     --forest: #2F5D50;              /* footer background */
     --sand: #886548;                 /* accent from neutral palette */
-    --light-sand: #CEC1B4;           /* page background */
+    --light-sand: #E8E4DF;           /* new page background (light neutral) */
     --white: #FFFFFF;
     --text-dark: #2C3E50;
     --text-light: #5D6D7E;
@@ -1009,3 +1009,4 @@ footer:before {
         margin-top: 60px;
     }
 }
+
