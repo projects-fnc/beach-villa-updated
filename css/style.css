@@ -180,8 +180,7 @@ nav {
 .page-hero {
     height: 70vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), 
-                 /* <img src="images/guest-beach-villa.JPG" alt="resorts-in-Thrissur">   */
-        url("images/Hero-Banner-2.png")
+                url("images/Hero-Banner-2.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -191,7 +190,6 @@ nav {
     position: relative;
     margin-top: 60px;
 }
-
 .page-hero-content {
     max-width: 800px;
     margin: 0 auto;
@@ -1168,6 +1166,7 @@ footer .container {
         margin-top: 60px;
     }
 }
+
 
 
 
